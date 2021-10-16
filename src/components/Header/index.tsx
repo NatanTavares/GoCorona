@@ -27,6 +27,7 @@ export function Header() {
           </li>
         </Navigation>
 
+        {/* The button must be hidden when on the cellular phone */}
         <Button label="download" colorSchema="blue" />
       </div>
     </Container>

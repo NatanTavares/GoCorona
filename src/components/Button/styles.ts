@@ -5,10 +5,10 @@ type Props = {
 };
 
 export const Container = styled.button<Props>`
-  padding: 0.875rem 1.875rem;
+  padding: ${({ theme }) => theme.scales.spacing.md} ${({ theme }) => theme.scales.spacing.lg};
 
   border: none;
-  border-radius: 0.3125rem;
+  border-radius: 5px;
 
   letter-spacing: 0.14em;
   font: ${({ theme }) => theme.font.buttonLabel};
