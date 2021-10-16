@@ -8,7 +8,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 export function Button({ label, colorSchema = "red", ...rest }: ButtonProps) {
   return (
     <Container {...rest} colorSchema={colorSchema}>
-      {label}
+      {label.toUpperCase()}
     </Container>
   );
 }

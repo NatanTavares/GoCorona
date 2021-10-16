@@ -5,9 +5,10 @@ export const defaultTheme: DefaultTheme = {
 
   scales: {
     spacing: {
-      sm: ".25rem",
+      sm: "0.25rem",
       md: "0.875rem",
       lg: "1.875rem",
+      xl: "2.5rem",
     },
   },
 
@@ -26,7 +27,7 @@ export const defaultTheme: DefaultTheme = {
   font: {
     title: "700 2.75rem /3.4rem Rubik",
     paraph: "400 0.75rem /1rem Rubik",
-    buttonLabel: "800 0.625rem /0.75rem Rubik",
-    navigationLabel: "700 0.75rem /1rem Raleway",
+    buttonLabel: "800 0.625rem /0.75rem Raleway",
+    navigationLabel: "700 0.625rem /0.75rem Raleway",
   },
 };

@@ -3,6 +3,8 @@ import Head from "next/head";
 
 import { MainSection } from "../screens/Main";
 
+import { Container } from "../styles/pages/home";
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -12,9 +14,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
-      <main>
+      <Container>
         <MainSection />
-      </main>
+      </Container>
     </div>
   );
 };

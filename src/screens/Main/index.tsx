@@ -1,28 +1,17 @@
 import Image from "next/image";
 
-import GoCoronaSVG from "../../assets/goCorona.svg";
+import { Header } from "../../components/Header";
+import { Button } from "../../components/Button";
+
 import AttentionSVG from "../../assets/Attention.svg";
 import PlayButtonSVG from "../../assets/playButton.svg";
 
 export function MainSection() {
   return (
     <section>
-      <header>
-        <Image src={GoCoronaSVG} alt="GoCorona" />
+      <Header />
 
-        <div>
-          <nav>
-            <li>HOME</li>
-            <li>ABOUT</li>
-            <li>SUPPORT</li>
-            <li>CONTACT US</li>
-          </nav>
-
-          <button>DOWNLOAD</button>
-        </div>
-      </header>
-
-      <div>
+      {/* <div>
         <div>
           <h1>
             Take care of yours family&apos;s <strong>health</strong>
@@ -31,7 +20,7 @@ export function MainSection() {
             All in one destination for COVID-19 health queries. Consult 10,000+
             health workers about your concerns.
           </p>
-          <button>GET STARTED</button>
+          <Button label="GET STARTED" />
         </div>
 
         <button>
@@ -40,10 +29,9 @@ export function MainSection() {
           <p>Watch Video</p>
         </button>
       </div>
-      <div>
+      <div className="redBackground">
         <Image src={AttentionSVG} alt="Attention" />
-        {/* background red */}
-      </div>
+      </div> */}
     </section>
   );
 }
