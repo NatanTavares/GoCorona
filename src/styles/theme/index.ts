@@ -1,19 +1,34 @@
 import { DefaultTheme } from "styled-components";
 
 export const defaultTheme: DefaultTheme = {
-  borderRadius: "0.3125rem",
+  borderRadius: {
+    sm: "5px",
+    md: "8px",
+    lg: "16px",
+    xl: "30px",
+  },
 
   scales: {
+    boxSize: {
+      sm: "18.75rem",
+      md: "25rem",
+      lg: "31.25rem",
+    },
+
     spacing: {
       sm: "0.25rem",
       md: "0.875rem",
       lg: "1.875rem",
-      xl: "2.5rem",
+      xl: "4.375rem",
+      xxl: "6.25rem",
     },
   },
 
   palette: {
-    bg: "#FAFBFD",
+    bg: {
+      main: "#FAFBFD",
+      secondary: "#FFFFFF",
+    },
     contrast: "#111111",
     highlight: "#B0B0B0",
 
@@ -26,6 +41,7 @@ export const defaultTheme: DefaultTheme = {
 
   font: {
     title: "700 2.75rem /3.4rem Rubik",
+    subtitle: "700 2.25rem /2.675rem Rubik",
     paraph: "400 0.75rem /1rem Rubik",
     buttonLabel: "800 0.625rem /0.75rem Raleway",
     navigationLabel: "700 0.625rem /0.75rem Raleway",

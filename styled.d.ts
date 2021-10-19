@@ -7,21 +7,37 @@ type IPlatte = {
 
 declare module "styled-components" {
   export interface DefaultTheme {
-    borderRadius: string;
+    borderRadius: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+    };
 
     scales: {
+      boxSize: {
+        sm: string;
+        md: string;
+        lg: string;
+      };
+
       spacing: {
         sm: string;
         md: string;
         lg: string;
         xl: string;
+        xxl: string;
       };
     };
 
     palette: {
-      bg: string;
+      bg: {
+        main: string;
+        secondary: string;
+      };
+
       contrast: string;
-      highlight: srting;
+      highlight: string;
 
       red: string;
       blue: string;
@@ -32,6 +48,7 @@ declare module "styled-components" {
 
     font: {
       title: string;
+      subtitle: string;
       paraph: string;
       buttonLabel: string;
       navigationLabel: string;
