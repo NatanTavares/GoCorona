@@ -8,11 +8,11 @@ export const Container = styled.button<Props>`
   padding: ${({ theme }) => theme.scales.spacing.md} ${({ theme }) => theme.scales.spacing.lg};
 
   border: none;
-  border-radius: 5px;
+  border-radius: ${({theme}) => theme.borderRadius.sm};
 
   letter-spacing: 0.14em;
   font: ${({ theme }) => theme.font.buttonLabel};
-  color: ${({ theme }) => theme.palette.bg};
+  color: ${({ theme }) => theme.palette.bg.main};
 
   background: ${({ theme, colorSchema }) => {
     if (colorSchema === "red") {
