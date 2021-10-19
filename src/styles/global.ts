@@ -20,7 +20,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.palette.bg};
+    background: ${({ theme }) => theme.palette.bg.main};
+    overflow-x: hidden;
   }
 
   body,
