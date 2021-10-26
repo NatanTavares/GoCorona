@@ -1,7 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { MainSection } from "../screens/Main";
+import { MainSection } from "../components/Sections/Main";
+import { AuthSection } from "../components/Sections/Auth";
+import { HealthcareSection } from "../components/Sections/Healthcare";
+import { ContactSection } from "../components/Sections/Contact";
 
 import { Container } from "../styles/pages/home";
 
@@ -16,6 +19,9 @@ const Home: NextPage = () => {
 
       <Container>
         <MainSection />
+        <AuthSection />
+        <ContactSection />
+        <HealthcareSection />
       </Container>
     </div>
   );

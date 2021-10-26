@@ -42,6 +42,7 @@ export const defaultTheme: DefaultTheme = {
   font: {
     title: "700 2.75rem /3.4rem Rubik",
     subtitle: "700 2.25rem /2.675rem Rubik",
+    cardLabel: "700 1rem /1.9rem Rubik",
     paraph: "400 0.75rem /1rem Rubik",
     buttonLabel: "800 0.625rem /0.75rem Raleway",
     navigationLabel: "700 0.625rem /0.75rem Raleway",

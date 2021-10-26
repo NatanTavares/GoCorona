@@ -49,6 +49,7 @@ declare module "styled-components" {
     font: {
       title: string;
       subtitle: string;
+      cardLabel: string;
       paraph: string;
       buttonLabel: string;
       navigationLabel: string;
