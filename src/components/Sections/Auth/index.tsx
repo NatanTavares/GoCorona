@@ -8,7 +8,7 @@ import AuthMockupSVG from "../../../assets/authMockup.svg";
 
 export function AuthSection() {
   return (
-    <Container>
+    <Container id="login">
       <MockContainer>
         <Image src={AuthMockupSVG} alt="Mockup" />
       </MockContainer>

@@ -14,20 +14,20 @@ export function Header() {
       <div>
         <Navigation>
           <li>
-            <Link href="/">HOME</Link>
+            <Link href="#home">HOME</Link>
           </li>
           <li>
-            <Link href="/">FEATURES</Link>
+            <Link href="#login">LOGIN</Link>
+          </li>
+
+          <li>
+            <Link href="#contactUs">CONTACT US</Link>
           </li>
           <li>
-            <Link href="/">SUPPORT</Link>
-          </li>
-          <li>
-            <Link href="/">CONTACT US</Link>
+            <Link href="#features">FEATURES</Link>
           </li>
         </Navigation>
 
-        {/* The button must be hidden when on the cellular phone */}
         <Button label="download" colorSchema="blue" />
       </div>
     </Container>

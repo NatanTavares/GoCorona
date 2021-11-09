@@ -10,7 +10,7 @@ import AttentionSVG from "../../../assets/Attention.svg";
 
 export function MainSection() {
   return (
-    <Container>
+    <Container id="home">
       <Header />
 
       <Content>

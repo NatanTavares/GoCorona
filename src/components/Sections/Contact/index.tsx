@@ -9,7 +9,7 @@ import FakePlayerSVG from "../../../assets/fakePlayer.svg";
 
 export function ContactSection() {
   return (
-    <Container>
+    <Container id="contactUs">
       <Scoreboard />
 
       <Summary>

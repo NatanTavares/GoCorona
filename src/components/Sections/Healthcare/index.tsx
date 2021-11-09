@@ -12,7 +12,7 @@ import FourRectangles from "../../../assets/fourRectangles.svg";
 
 export function HealthcareSection() {
   return (
-    <Container>
+    <Container id="features">
       <article>
         <h1>
           <strong>Healthcare </strong>
