@@ -17,6 +17,8 @@ export const Summary = styled.div`
 
 export const Content = styled.div`
   article {
+    margin-bottom: ${({ theme }) => theme.scales.spacing.lg};
+
     h1 {
       margin-bottom: ${({ theme }) => theme.scales.spacing.md};
 
