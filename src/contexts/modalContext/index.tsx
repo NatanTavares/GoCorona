@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ToastContainer, toast } from "react-toastify";
 
-import { Button } from "../components/Button";
-import { InputField } from "../components/InputField";
+import { Button } from "../../components/Button";
+import { InputField } from "../../components/InputField";
 
 import { CloseBtn, Container, Form } from "./styles";
 import { MdOutlineClose } from "react-icons/md";
