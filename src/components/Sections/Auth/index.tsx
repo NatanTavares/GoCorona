@@ -5,8 +5,11 @@ import { Wrapper } from "../../Wrapper";
 
 import { Container, Content, MockContainer } from "./styles";
 import AuthMockupSVG from "../../../assets/authMockup.svg";
+import { useModal } from "../../../hooks/useModal";
 
 export function AuthSection() {
+  const { openModal } = useModal();
+
   return (
     <Container id="login">
       <MockContainer>
@@ -25,7 +28,7 @@ export function AuthSection() {
               culture.
             </p>
           </article>
-          <Button label="features" />
+          <Button label="sign in" onClick={openModal} />
         </Content>
       </Wrapper>
     </Container>
