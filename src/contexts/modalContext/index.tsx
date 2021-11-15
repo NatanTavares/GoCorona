@@ -3,7 +3,6 @@ import * as yup from "yup";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { ToastContainer, toast } from "react-toastify";
 
 import { Button } from "../../components/Button";
 import { InputField } from "../../components/InputField";
@@ -11,6 +10,7 @@ import { InputField } from "../../components/InputField";
 import { CloseBtn, Container, Form } from "./styles";
 import { MdOutlineClose } from "react-icons/md";
 import "react-toastify/dist/ReactToastify.css";
+import { useNotification } from "../../hooks/useNotification";
 
 type ModalContext = {
   openModal: () => void;
@@ -46,6 +46,8 @@ export const ModalContextProvider: React.FC = ({ children }) => {
     formState: { errors },
   } = useForm<Inputs>({ resolver: yupResolver(schema) });
 
+  const { emitterErrorNotification } = useNotification();
+
   const openModal = () => {
     setIsOpen(true);
   };
@@ -67,32 +69,23 @@ export const ModalContextProvider: React.FC = ({ children }) => {
   };
 
   useEffect(() => {
-    if (errors.username) {
-      toast.error(errors.username.message);
+    const { username, password, remember } = errors;
+
+    if (!!username?.message) {
+      emitterErrorNotification(username.message);
     }
 
-    if (errors.password) {
-      toast.error(errors.password.message);
+    if (!!password?.message) {
+      emitterErrorNotification(password.message);
     }
 
-    if (errors.remember) {
-      toast.error(errors.remember.message);
+    if (!!remember?.message) {
+      emitterErrorNotification(remember!.message);
     }
   }, [errors]);
 
   return (
     <ModalContext.Provider value={{ openModal }}>
-      <ToastContainer
-        theme="colored"
-        position="top-right"
-        autoClose={5000}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
