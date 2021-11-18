@@ -1,11 +1,13 @@
 import { forwardRef, InputHTMLAttributes } from "react";
 import { UseFormRegister } from "react-hook-form";
-import { Inputs } from "../../contexts/modalContext";
+
+import { InputsSignIn } from "../Modals/SignIn";
+import { InputsSignUp } from "../Modals/SignUp";
 
 import { Container } from "./styles";
 
 type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
-  labelId: "username" | "password" | "remember";
+  labelId: "username" | "password" | "passwordConfirmation" | "remember";
   label: string;
   error: boolean;
 };
@@ -24,5 +26,5 @@ const InputFieldComponent = (
 
 export const InputField = forwardRef<
   HTMLInputElement,
-  InputFieldProps & ReturnType<UseFormRegister<Inputs>>
+  InputFieldProps & ReturnType<UseFormRegister<InputsSignIn | InputsSignUp>>
 >(InputFieldComponent);
