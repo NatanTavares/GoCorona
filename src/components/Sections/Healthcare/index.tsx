@@ -1,8 +1,15 @@
 import Image from "next/image";
+import { useNotification } from "../../../hooks/useNotification";
 
 import { Card } from "../../Card";
 
-import { CardsWrapper, Container, Content, ImageContainer } from "./styles";
+import {
+  ApplicationStoreButton,
+  CardsWrapper,
+  Container,
+  Content,
+  ImageContainer,
+} from "./styles";
 import MedicSVG from "../../../assets/medic.svg";
 import PeopleSVG from "../../../assets/people.svg";
 import HeartRateSVG from "../../../assets/heartRate.svg";
@@ -11,6 +18,8 @@ import GooglePlaySVG from "../../../assets/googlePlay.svg";
 import FourRectangles from "../../../assets/fourRectangles.svg";
 
 export function HealthcareSection() {
+  const { emitterWarnNotification } = useNotification();
+
   return (
     <Container id="features">
       <article>
@@ -44,8 +53,29 @@ export function HealthcareSection() {
       </CardsWrapper>
 
       <footer>
-        <Image src={GooglePlaySVG} alt="GooglePlay" />
-        <Image src={AppleStoreSVG} alt="AppleStore" />
+        <ApplicationStoreButton>
+          <Image
+            src={GooglePlaySVG}
+            alt="GooglePlay"
+            onClick={() =>
+              emitterWarnNotification(
+                "We are working on it! Soon this functionality will be available"
+              )
+            }
+          />
+        </ApplicationStoreButton>
+
+        <ApplicationStoreButton>
+          <Image
+            src={AppleStoreSVG}
+            alt="AppleStore"
+            onClick={() =>
+              emitterWarnNotification(
+                "We are working on it! Soon this functionality will be available"
+              )
+            }
+          />
+        </ApplicationStoreButton>
       </footer>
     </Container>
   );

@@ -63,3 +63,21 @@ export const ImageContainer = styled.div`
     width: 75rem;
   }
 `;
+
+export const ApplicationStoreButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 3.75rem;
+
+  background: none;
+  border: none;
+  border-radius: ${({ theme }) => theme.borderRadius.md};
+
+  transition: filter 0.2s ease-in-out;
+
+  :hover {
+    filter: brightness(1.3);
+  }
+`;
