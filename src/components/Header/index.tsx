@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useNotification } from "../../hooks/useNotification";
 
 import { Button } from "../../components/Button";
 
@@ -7,6 +8,8 @@ import { Container, Navigation } from "./styles";
 import GoCoronaSVG from "../../assets/goCorona.svg";
 
 export function Header() {
+  const { emitterWarnNotification } = useNotification();
+
   return (
     <Container>
       <Image src={GoCoronaSVG} alt="GoCorona" />
@@ -28,7 +31,15 @@ export function Header() {
           </li>
         </Navigation>
 
-        <Button label="download" colorSchema="blue" />
+        <Button
+          label="download"
+          colorSchema="blue"
+          onClick={() =>
+            emitterWarnNotification(
+              `We are working on it!  Soon this functionality will be available`
+            )
+          }
+        />
       </div>
     </Container>
   );
