@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Button } from "../Button";
 import { useForm } from "react-hook-form";
 import { InputField } from "../InputField";
+import { useModal } from "../../hooks/useModal";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNotification } from "../../hooks/useNotification";
 import * as yup from "yup";
@@ -33,6 +34,7 @@ export function SignInModalContent({ closeModal }: SignInModalContentProps) {
   } = useForm<InputsSignIn>({ resolver: yupResolver(SCHEMA) });
 
   const { emitterErrorNotification } = useNotification();
+  const { openModal } = useModal();
 
   function onSubmit(data: InputsSignIn) {
     console.log(data);
@@ -64,7 +66,16 @@ export function SignInModalContent({ closeModal }: SignInModalContentProps) {
       </header>
 
       <Legends>
-        <p>Authentication to consume some interesting data about COVID-19.</p>
+        <p>
+          Authentication to consume some interesting data about{" "}
+          <strong>COVID-19</strong>.
+        </p>
+        <p>
+          Don't have an account?{" "}
+          <a href="#home" onClick={() => openModal("signUp")}>
+            Sign Up
+          </a>
+        </p>
       </Legends>
 
       <Form onSubmit={handleSubmit(onSubmit)}>
