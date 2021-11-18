@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { ModalContextProvider } from "../contexts/modalContext";
+import { ModalContextProvider } from "../contexts/ModalContext";
 import { NotificationsContextProvider } from "../contexts/NotificationsContext";
 
 import { GlobalStyle } from "../styles/global";

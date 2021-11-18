@@ -1,13 +1,16 @@
 import Image from "next/image";
+import { useModal } from "../../../hooks/useModal";
 
 import { Button } from "../../Button";
-import { Scoreboard } from "../../Scoreboard";
 import { Wrapper } from "../../Wrapper";
+import { Scoreboard } from "../../Scoreboard";
 
 import { Container, Content, Summary } from "./styles";
 import FakePlayerSVG from "../../../assets/fakePlayer.svg";
 
 export function ContactSection() {
+  const { openModal } = useModal();
+
   return (
     <Container id="contactUs">
       <Scoreboard />
@@ -25,7 +28,7 @@ export function ContactSection() {
                 Virus.
               </p>
             </article>
-            <Button label="features" />
+            <Button label="Send message" onClick={() => openModal("contact")} />
           </Content>
         </Wrapper>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useModal } from "../../../hooks/useModal";
 
 import { Header } from "../../Header";
 import { Button } from "../../Button";
@@ -9,6 +10,8 @@ import { Container, Content, RedAside, Started, Illustration } from "./styles";
 import AttentionSVG from "../../../assets/Attention.svg";
 
 export function MainSection() {
+  const { openModal } = useModal();
+
   return (
     <Container id="home">
       <Header />
@@ -26,7 +29,7 @@ export function MainSection() {
                 Consult 10,000+ health workers about your concerns.
               </p>
             </article>
-            <Button label="Get started" />
+            <Button label="Get started" onClick={() => openModal("signUp")} />
           </Started>
         </Wrapper>
 

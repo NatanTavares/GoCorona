@@ -2,10 +2,10 @@ import Image from "next/image";
 
 import { Button } from "../../Button";
 import { Wrapper } from "../../Wrapper";
+import { useModal } from "../../../hooks/useModal";
 
 import { Container, Content, MockContainer } from "./styles";
 import AuthMockupSVG from "../../../assets/authMockup.svg";
-import { useModal } from "../../../hooks/useModal";
 
 export function AuthSection() {
   const { openModal } = useModal();
@@ -28,7 +28,7 @@ export function AuthSection() {
               culture.
             </p>
           </article>
-          <Button label="sign in" onClick={openModal} />
+          <Button label="sign in" onClick={() => openModal("signIn")} />
         </Content>
       </Wrapper>
     </Container>
