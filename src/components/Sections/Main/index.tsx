@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useModal } from "../../../hooks/useModal";
+import { useNotification } from "../../../hooks/useNotification";
 
 import { Header } from "../../Header";
 import { Button } from "../../Button";
@@ -11,6 +12,7 @@ import AttentionSVG from "../../../assets/Attention.svg";
 
 export function MainSection() {
   const { openModal } = useModal();
+  const { emitterWarnNotification } = useNotification();
 
   return (
     <Container id="home">
@@ -33,7 +35,13 @@ export function MainSection() {
           </Started>
         </Wrapper>
 
-        <PlayButton />
+        <PlayButton
+          onClick={() =>
+            emitterWarnNotification(
+              `We are working on it!  Soon this functionality will be available`
+            )
+          }
+        />
       </Content>
 
       <RedAside />
