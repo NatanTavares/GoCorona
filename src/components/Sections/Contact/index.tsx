@@ -1,19 +1,30 @@
 import Image from "next/image";
 import { useModal } from "../../../hooks/useModal";
+import { useNotification } from "../../../hooks/useNotification";
 
 import { Button } from "../../Button";
 import { Wrapper } from "../../Wrapper";
 import { Scoreboard } from "../../Scoreboard";
 
-import { Container, Content, Summary } from "./styles";
+import {
+  ButtonWrapper,
+  Container,
+  Content,
+  ImageWrapper,
+  ScoreboardWrapper,
+  Summary,
+} from "./styles";
 import FakePlayerSVG from "../../../assets/fakePlayer.svg";
 
 export function ContactSection() {
   const { openModal } = useModal();
+  const { emitterWarnNotification } = useNotification();
 
   return (
     <Container id="contactUs">
-      <Scoreboard />
+      <ScoreboardWrapper>
+        <Scoreboard />
+      </ScoreboardWrapper>
 
       <Summary>
         <Wrapper>
@@ -28,11 +39,27 @@ export function ContactSection() {
                 Virus.
               </p>
             </article>
-            <Button label="Send message" onClick={() => openModal("contact")} />
+
+            <ButtonWrapper>
+              <Button
+                label="Send message"
+                onClick={() => openModal("contact")}
+              />
+            </ButtonWrapper>
           </Content>
         </Wrapper>
 
-        <Image src={FakePlayerSVG} alt="fake video player" />
+        <ImageWrapper>
+          <button
+            onClick={() =>
+              emitterWarnNotification(
+                `We are working on it!  Soon this functionality will be available`
+              )
+            }
+          >
+            <Image src={FakePlayerSVG} alt="fake video player" />
+          </button>
+        </ImageWrapper>
       </Summary>
     </Container>
   );

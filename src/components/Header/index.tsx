@@ -4,7 +4,7 @@ import { useNotification } from "../../hooks/useNotification";
 
 import { Button } from "../../components/Button";
 
-import { Container, Navigation } from "./styles";
+import { ButtonWrapper, Container, Navigation } from "./styles";
 import GoCoronaSVG from "../../assets/goCorona.svg";
 
 export function Header() {
@@ -23,7 +23,7 @@ export function Header() {
             <Link href="#login">LOGIN</Link>
           </li>
 
-          <li>
+          <li className="compositeLabel">
             <Link href="#contactUs">CONTACT US</Link>
           </li>
           <li>
@@ -31,15 +31,17 @@ export function Header() {
           </li>
         </Navigation>
 
-        <Button
-          label="download"
-          colorSchema="blue"
-          onClick={() =>
-            emitterWarnNotification(
-              `We are working on it!  Soon this functionality will be available`
-            )
-          }
-        />
+        <ButtonWrapper>
+          <Button
+            label="download"
+            colorSchema="blue"
+            onClick={() =>
+              emitterWarnNotification(
+                `We are working on it!  Soon this functionality will be available`
+              )
+            }
+          />
+        </ButtonWrapper>
       </div>
     </Container>
   );

@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  height: 100vh;
+  min-height: 100vh;
   padding: 5rem 3.125rem 2.5rem;
   background: ${({ theme }) => theme.palette.bg.secondary};
 
@@ -44,23 +44,35 @@ export const CardsWrapper = styled.div`
   position: relative;
 
   width: 100%;
-  height: 23.125rem;
+  min-height: 23.125rem;
   margin-top: -2rem;
 `;
 
 export const Content = styled.div`
   flex: 1;
+
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
 
   z-index: 1;
 `;
 
 export const ImageContainer = styled.div`
   position: absolute;
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  @media (max-width: 800px) {
+    width: 100vw;
+    left: -3.125rem;
+  }
 
   img {
-    width: 75rem;
+    width: 100vw;
   }
 `;
 

@@ -6,21 +6,25 @@ import RectanglesSVG from "../../assets/rectangles.svg";
 type ScoreboardProps = {};
 
 export function Scoreboard({}: ScoreboardProps) {
+  const user = 2;
+  const countries = 78;
+  const doctors = 10;
+
   return (
     <Container>
       <Content>
         <div>
-          <strong>2m</strong>
+          <strong>{user}m</strong>
           <span>USERS</span>
         </div>
 
         <div>
-          <strong>78</strong>
+          <strong>{countries}</strong>
           <span>COUNTRIES</span>
         </div>
 
         <div>
-          <strong>10,000+</strong>
+          <strong>{doctors},000+</strong>
           <span>MEDICAL EXPERTS</span>
         </div>
       </Content>

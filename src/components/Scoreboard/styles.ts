@@ -4,6 +4,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   height: 12.5rem;
+  width: 100%;
 `;
 
 export const Content = styled.div`
@@ -12,8 +13,9 @@ export const Content = styled.div`
   justify-content: space-around;
 
   max-width: 36.6rem;
-  max-height: 6.25rem;
   width: 100%;
+
+  max-height: 6.25rem;
   height: 100%;
   margin: auto;
 
@@ -40,12 +42,12 @@ export const Content = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  scale: 1.2;
+  width: 100vw;
+  max-width: 43.75rem;
 
   position: absolute;
   left: 50%;
-  top: 6%;
 
-  transform: translateX(-40%);
+  transform: translateX(-50%);
   z-index: -999;
 `;
