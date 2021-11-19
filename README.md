@@ -107,7 +107,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Natan T - [@Natan_Tvrs](https://twitter.com/Natan_Tvrs) - nattantavares.s15@gmail.com
-
 Project Link: [https://gocorona.vercel.app](https://gocorona.vercel.app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -120,8 +119,8 @@ Project Link: [https://gocorona.vercel.app](https://gocorona.vercel.app)
 
 [stars-shield]: https://img.shields.io/github/stars/NatanTavares/GoCorona.svg?style=for-the-badge
 [stars-url]: https://github.com/NatanTavares/GoCorona/stargazers
-[license-shield]: https://img.shields.io/github/license/NatanTavares/GoCorona.svg?style=for-the-badge
-[license-url]: https://github.com/NatanTavares/GoCorona/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/NatanTavares/GoCorona?style=for-the-badge
+[license-url]: https://github.com/NatanTavares/GoCorona/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/natan-tavares/
 [product-screenshot]: .docs/product-screenshot.jpg
