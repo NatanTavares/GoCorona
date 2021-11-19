@@ -33,11 +33,15 @@ export function SignInModalContent({ closeModal }: SignInModalContentProps) {
     formState: { errors },
   } = useForm<InputsSignIn>({ resolver: yupResolver(SCHEMA) });
 
-  const { emitterErrorNotification } = useNotification();
+  const { emitterErrorNotification, emitterWarnNotification } =
+    useNotification();
   const { openModal } = useModal();
 
   function onSubmit(data: InputsSignIn) {
     console.log(data);
+    emitterWarnNotification(
+      "We are working on it! Soon this functionality will be available"
+    );
   }
 
   useEffect(() => {

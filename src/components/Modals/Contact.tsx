@@ -18,7 +18,7 @@ export type InputContact = {
 };
 
 const SCHEMA = yup.object().shape({
-  body: yup.string().required().min(3),
+  body: yup.string().min(3, "Message must be at least 3 characters"),
 });
 
 export function ContactModalContent({ closeModal }: ContactModalContentProps) {
@@ -28,10 +28,14 @@ export function ContactModalContent({ closeModal }: ContactModalContentProps) {
     formState: { errors },
   } = useForm<InputContact>({ resolver: yupResolver(SCHEMA) });
 
-  const { emitterErrorNotification } = useNotification();
+  const { emitterErrorNotification, emitterWarnNotification } =
+    useNotification();
 
   function onSubmit(data: InputContact) {
     console.log(data);
+    emitterWarnNotification(
+      "We are working on it! Soon this functionality will be available"
+    );
   }
 
   useEffect(() => {
